@@ -1,14 +1,13 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
+|username|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
 ### Association
 - belongs_to :group
 - belogns_to :chat
 -has_many :users, through: :groups
-
 
 ## groupsテーブル
 |Column|Type|Options|
@@ -35,11 +34,11 @@
 ##membersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|member_name|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
--belongs_to :group
--has_many: users
+- belongs_to :group
+- has_many: users
 
 
